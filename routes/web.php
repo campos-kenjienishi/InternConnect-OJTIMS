@@ -123,6 +123,7 @@ Route::get('/professor/listStudents/{course}', [ProfessorController::class,'show
 Route::get('/supTab', [AuthController::class,'supTab']);
 Route::post('/supCreate', [AuthController::class,'supCreate'])->name('supCreate');
 Route::post('/roomCreate', [ProfessorController::class,'roomCreate'])->name('roomCreate');
+Route::post('/roomDelete/{id}', [ProfessorController::class,'roomDelete'])->name('roomDelete');
 Route::get('/professor/classList/{course}', [ProfessorController::class,'show_list']);
 Route::post('/professor/approve/{email}', [ProfessorController::class,'approve']);
 Route::post('/professor/deny/{email}', [ProfessorController::class,'deny']);

@@ -111,6 +111,20 @@ else{
 }
 }
 
+public function roomDelete($id)
+{
+    $room = Classes::find($id);
+
+    if (!$room) {
+        return response()->json(['error' => 'Room not found'], 404);
+    }
+
+    // Delete the room immediately
+    $room->delete();
+
+    return response()->json(['success' => true]);
+}
+
 public function show_list($courseName)
 {
     $data = array();
