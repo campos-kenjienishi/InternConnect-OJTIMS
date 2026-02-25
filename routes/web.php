@@ -108,6 +108,7 @@ Route::get('/student/accountinfo', [StudentController::class,'student_acc']);
 Route::put('/student/edit/{email}', [StudentController::class,'edit']);
 Route::get('/student/class', [StudentController::class,'class']);
 Route::post('/student/join/{email}', [StudentController::class,'join']);
+Route::post('/student/leave', [StudentController::class,'leave']);
 Route::get('/student/files', [StudentController::class,'fileSee']);
 Route::get('/student/ojtinfo', [StudentController::class,'ojtInformation']);
 Route::put('/student/ojtEdit/{studentNum}', [StudentController::class,'ojt_edit']); 
